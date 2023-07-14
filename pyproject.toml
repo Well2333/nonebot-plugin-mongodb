@@ -1,0 +1,24 @@
+
+[project]
+name = "nonebot-plugin-mongodb"
+version = "0.1.0"
+description = "基于 MongoDB ODM 的数据库管理插件"
+authors = [
+    {name = "Well404", email = "well_404@outlook.com"},
+]
+dependencies = [
+    "nonebot2>=2.0.0",
+    "beanie>=1.20.0",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+[project.optional-dependencies]
+dev = [
+    "nonebot-adapter-onebot>=2.2.3",
+    "nonebot2[fastapi,websockets]>=2.0.0",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
