@@ -2,7 +2,7 @@
 [project]
 name = "nonebot-plugin-mongodb"
 version = "0.1.0"
-description = ""
+description = "基于 MongoDB ODM 的数据库管理插件"
 authors = [
     {name = "Well404", email = "well_404@outlook.com"},
 ]

@@ -19,9 +19,10 @@ class Product(Document):
         float
     )  # You can also specify that a field should correspond to an index
     category: Category  # You can include pydantic models as well
-    
+
     class Settings:
         name = "nonebot_plugin_mongodb.Product"
+
 
 class Product2(Document):
     name: str  # You can use normal types just like in pydantic
@@ -30,7 +31,6 @@ class Product2(Document):
         float
     )  # You can also specify that a field should correspond to an index
     category: Category  # You can include pydantic models as well
-    
 
 
 driver = get_driver()

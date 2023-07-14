@@ -1,15 +1,16 @@
-import importlib.util
-import json
 import sys
-
-# get package version
-from importlib.metadata import version
 
 from nonebot import get_driver
 from pydantic import BaseModel
 
+# get package version
 try:
-    __version__ = version("nonebot_plugin_mongodb")
+    from importlib.metadata import version
+except Exception:
+    from importlib_metadata import version
+
+try:
+    __version__ = version("nonebot_plugin_bilichat")
 except Exception:
     __version__ = None
 

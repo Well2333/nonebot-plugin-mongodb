@@ -1,8 +1,26 @@
-from typing import List, Dict
+from typing import Dict, List
+
 from beanie import Document, init_beanie
 from motor.motor_asyncio import AsyncIOMotorClient
-from nonebot.log import logger
 from nonebot import get_driver
+from nonebot.log import logger
+from nonebot.plugin import PluginMetadata
+
+from .config import Config, __version__
+
+__plugin_meta__ = PluginMetadata(
+    name="MongoDB",
+    description="基于 MongoDB ODM 的数据库管理插件",
+    usage="无",
+    type="library",
+    homepage="https://github.com/Well2333/nonebot-plugin-mongodb",
+    config=Config,
+    extra={
+        "author": "Well404",
+        "version": __version__,
+        "priority": 1,
+    },
+)
 
 from .config import plugin_config
 
